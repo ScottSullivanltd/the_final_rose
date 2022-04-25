@@ -26,4 +26,18 @@ RSpec.describe "Bachelorette Show Page" do
     expect(current_path).to eq(bachelorette_contestants_path(bachelorette1.id))
     expect(current_path).to_not eq(bachelorette_contestants_path(bachelorette2.id))
   end
+
+  it "displays average age of a bachelorette's contestants" do
+    bachelorette1 = Bachelorette.create!(name: "Hannah", season_number: 15)
+    bachelorette2 = Bachelorette.create!(name: "Mia", season_number: 11)
+
+    contestant1 = bachelorette1.contestants.create!(name: "Rob", age: 29, hometown: "Denver")
+    contestant2 = bachelorette1.contestants.create!(name: "Mike", age: 34, hometown: "Greeley")
+    contestant3 = bachelorette1.contestants.create!(name: "Ryan", age: 24, hometown: "Golden")
+    contestant4 = bachelorette2.contestants.create!(name: "Alex", age: 40, hometown: "Frisco")
+
+    visit bachelorette_path(bachelorette1.id)
+
+    expect(page).to have_content("Average Age of Contestants: 29.0")
+  end
 end
