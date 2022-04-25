@@ -1,5 +1,5 @@
 <h2><%= "Contestants:" %></h2>
 
   <% @contestants.each do |contestant| %>
-    <p><strong><%= contestant.name %></strong></p>
+    <p><strong>Name: <%= link_to contestant.name, bachelorette_contestant_path(:bachelorette_id, contestant.id) %>, Age: <%= contestant.age %>, Hometown: <%= contestant.hometown %></strong></p>
   <% end %>
