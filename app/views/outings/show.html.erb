@@ -1,0 +1,13 @@
+<h2>Outing Info</h2>
+
+<p><h3><%= @outing.name %></h3></p>
+<p><strong>Location: <%= @outing.location %></strong></p>
+<p><strong>Date: <%= @outing.date %></strong></p>
+<p><strong>Count of Contestants: <%= @outing.contestants.count %></strong></p>
+<p><strong>Contestants: <% @outing.contestants.each_with_index do |contestant, index| %>
+  <% if index != @outing.contestants.count - 1 %>
+    <%= contestant.name %>,
+  <% else %>
+    <%= contestant.name %>
+  <% end %>
+<% end %></strong></p>
