@@ -19,7 +19,7 @@ RSpec.describe "Outing Show Page" do
     OutingContestant.create!(outing: outing2, contestant: contestant4)
 
     visit outing_path(outing1.id)
-    save_and_open_page
+
     expect(page).to have_content("Kickball")
     expect(page).to have_content("Morrison")
     expect(page).to have_content("09/12/19")

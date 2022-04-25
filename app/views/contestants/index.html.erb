@@ -3,3 +3,15 @@
   <% @contestants.each do |contestant| %>
     <p><strong>Name: <%= link_to contestant.name, bachelorette_contestant_path(:bachelorette_id, contestant.id) %>, Age: <%= contestant.age %>, Hometown: <%= contestant.hometown %></strong></p>
   <% end %>
+
+  <div id="hometowns">
+    <p>These Contestants are from these hometowns:
+      <% @contestants.unique_hometowns.each_with_index do |hometown, index| %>
+        <% if index == @contestants.unique_hometowns.count - 1 %>
+          <%= hometown %>
+        <% else %>
+          <%= hometown %>,
+        <% end %>
+      <% end %>
+    </p>
+  </div>
