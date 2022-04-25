@@ -4,5 +4,6 @@ class ContestantsController < ApplicationController
   end
 
   def show
+    @contestant = Contestant.find(params[:id])
   end
 end

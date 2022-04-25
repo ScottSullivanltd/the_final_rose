@@ -1,0 +1,7 @@
+<h2><%= @contestant.name %></h2>
+<h3>Season <%= @contestant.bachelorette.season_number %> - No wait, THIS is the most dramatic season yet</h3>
+
+<h4>Outings:</h4>
+<% @contestant.outings.each do |outing| %>
+  <p><%= link_to outing.name, outing_path(outing.id) %></p>
+<% end %>
