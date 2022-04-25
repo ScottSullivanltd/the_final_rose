@@ -23,9 +23,9 @@ RSpec.describe "Contestant Show Page" do
 
     contestant1 = bachelorette1.contestants.create!(name: "Rob", age: 29, hometown: "Denver")
 
-    outing1 = Outing.create!(name: "Kickball", location: "Morrison", date: 09/12/19)
-    outing2 = Outing.create!(name: "Hot Springs", location: "Glenwood", date: 09/20/19)
-    outing3 = Outing.create!(name: "Helicopter Ride", location: "Arvada", date: 10/05/19)
+    outing1 = Outing.create!(name: "Kickball", location: "Morrison", date: "09/12/19")
+    outing2 = Outing.create!(name: "Hot Springs", location: "Glenwood", date: "09/20/19")
+    outing3 = Outing.create!(name: "Helicopter Ride", location: "Arvada", date: "10/05/19")
 
     OutingContestant.create!(outing: outing1, contestant: contestant1)
     OutingContestant.create!(outing: outing2, contestant: contestant1)
@@ -43,9 +43,9 @@ RSpec.describe "Contestant Show Page" do
 
     contestant1 = bachelorette1.contestants.create!(name: "Rob", age: 29, hometown: "Denver")
 
-    outing1 = Outing.create!(name: "Kickball", location: "Morrison", date: 09/12/19)
-    outing2 = Outing.create!(name: "Hot Springs", location: "Glenwood", date: 09/20/19)
-    outing3 = Outing.create!(name: "Helicopter Ride", location: "Arvada", date: 10/05/19)
+    outing1 = Outing.create!(name: "Kickball", location: "Morrison", date: "09/12/19")
+    outing2 = Outing.create!(name: "Hot Springs", location: "Glenwood", date: "09/20/19")
+    outing3 = Outing.create!(name: "Helicopter Ride", location: "Arvada", date: "10/05/19")
 
     OutingContestant.create!(outing: outing1, contestant: contestant1)
     OutingContestant.create!(outing: outing2, contestant: contestant1)

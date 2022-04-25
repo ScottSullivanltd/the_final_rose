@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2022_04_24_203305) do
   create_table "outings", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.datetime "date"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
