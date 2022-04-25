@@ -54,7 +54,7 @@ RSpec.describe "Bachelorette's Contestants Index Page" do
     contestant4 = bachelorette1.contestants.create!(name: "Alex", age: 40, hometown: "Denver")
 
     visit bachelorette_contestants_path(bachelorette1.id)
-    save_and_open_page
+
     within("#hometowns") do
       expect(page).to have_content("These Contestants are from these hometowns: Denver, Greeley, Golden")
     end
